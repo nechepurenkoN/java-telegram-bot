@@ -16,6 +16,7 @@
     <spring-beans.version>5.3.9</spring-beans.version>
     <lombok.version>RELEASE</lombok.version>
     <slf4j-simple.version>1.6.4</slf4j-simple.version>
+    <spring-data-jpa.version>2.4.0</spring-data-jpa.version>
   </properties>
 
   <dependencies>
@@ -42,6 +43,12 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
       <version>${spring-beans.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>${spring-data-jpa.version}</version>
     </dependency>
 
     <dependency>

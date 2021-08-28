@@ -1,5 +1,7 @@
 package com.github.nechepurenkon.botframework;
 
+import static com.github.nechepurenkon.botframework.utils.CommandParser.getCommand;
+
 import com.github.nechepurenkon.botframework.executors.CommandDispatcher;
 import com.github.nechepurenkon.botframework.configuration.TelegramBotFrameworkConfiguration;
 import com.pengrad.telegrambot.TelegramBot;
@@ -77,18 +79,6 @@ public class TelegramBotWrapper {
 
     private void pollEvents() throws InterruptedException {
 
-    }
-
-    private Pair<String, String> getCommand(String text) {
-        Pattern p = Pattern.compile("/(\\w+)( (.*))*");
-        Matcher m = p.matcher(text);
-        return m.matches() ? new Pair<>(
-            m.group(1),
-            m.group(3) != null ? m.group(3) : ""
-        ) : new Pair<>(
-            "empty",
-            text
-        );
     }
 
     @SneakyThrows
